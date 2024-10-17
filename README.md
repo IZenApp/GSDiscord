@@ -49,7 +49,7 @@
 ## Установка
 1. Клонируйте репозиторий:
     ```sh
-    git clone https://github.com/IZenApp/GSTelegramDiscord.bot.git
+    git clone https://github.com/IZenApp/GSDiscord.bot.git
     ```
 2. Перейдите в директорию проекта:
     ```sh
@@ -77,15 +77,15 @@ npm install googleapis google-auth-library node-fetch
     - Создайте проект в [Google Cloud Console](https://console.cloud.google.com/).
     - Включите Google Sheets API.
     - Создайте учетные данные и скачайте JSON файл.
-    - Поместите JSON файл в директорию `conf/` и назовите его `discordbot.json`.
+    - Поместите JSON файл в директорию и назовите его `discordbot.json`.
 
 2. **Discord Webhook**:
     - Создайте вебхук в вашем Discord сервере.
-    - Замените `discordWebhookUrl` в `GSTelegramDiscord.js`.
+    - Замените `discordWebhookUrl` в `GSDiscord.js`.
 
 ## Использование
 1. Запустите бота:
     ```sh
-    node GSTelegramDiscord.js
+    node GSDiscord.js
     ```
 2. Бот автоматически начнет опрашивать Google Sheets и отправлять данные в Discord.
