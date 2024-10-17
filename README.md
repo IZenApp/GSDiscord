@@ -1,5 +1,3 @@
-Вот обновлённое README без упоминаний о Telegram:
-
 # Discord Бот для Google Sheets
 
 ## Описание
