@@ -1,7 +1,6 @@
 {
   "name": "gsdiscord",
   "version": "1.0.0",
-  "description": "Вот обновлённое README без упоминаний о Telegram:",
   "main": "GSDiscord.js",
   "type": "module",
   "scripts": {
