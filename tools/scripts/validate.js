@@ -9,20 +9,20 @@ function validateConfig() {
   let hasErrors = false;
 
   // Проверка .env файла
-  const envPath = path.join(process.cwd(), '.env');
+  const envPath = path.join(process.cwd(), 'config', '.env');
   if (!fs.existsSync(envPath)) {
-    console.log('❌ Файл .env не найден');
+    console.log('❌ Файл config/.env не найден');
     console.log('   Запустите: npm run setup\n');
     hasErrors = true;
   } else {
-    console.log('✅ Файл .env найден');
+    console.log('✅ Файл config/.env найден');
   }
 
   // Проверка файла учетных данных
   const credentialsPath = path.join(process.cwd(), 'credentials', 'google-credentials.json');
   if (!fs.existsSync(credentialsPath)) {
     console.log('❌ Файл учетных данных Google не найден');
-    console.log('   Поместите файл в: credentials/google-credentials.json\n');
+    console.log('   Поместите файл в: config/credentials/google-credentials.json\n');
     hasErrors = true;
   } else {
     console.log('✅ Файл учетных данных Google найден');

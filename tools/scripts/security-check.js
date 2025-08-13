@@ -137,7 +137,7 @@ function checkGitignore() {
   
   const gitignoreContent = fs.readFileSync(gitignorePath, 'utf8');
   const requiredPatterns = [
-    '.env', 'credentials/', '*.log', '*.json'
+    'config/.env', 'config/credentials/', '*.log', '*.json'
   ];
   
   requiredPatterns.forEach(pattern => {
@@ -154,7 +154,7 @@ function checkGitignore() {
 }
 
 function checkEnvironmentFiles() {
-  const dangerousFiles = ['.env', 'config.json', 'secrets.json'];
+  const dangerousFiles = ['config/.env', 'config.json', 'secrets.json'];
   
   dangerousFiles.forEach(file => {
     if (fs.existsSync(path.join(process.cwd(), file))) {

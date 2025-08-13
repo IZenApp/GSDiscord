@@ -23,7 +23,7 @@ async function setup() {
   console.log('🚀 Настройка GSDiscord бота...\n');
 
   // Создание .env файла
-  const envPath = path.join(process.cwd(), '.env');
+  const envPath = path.join(process.cwd(), 'config', '.env');
   
   if (fs.existsSync(envPath)) {
     console.log('⚠️  Файл .env уже существует. Пропускаем создание...\n');
@@ -68,13 +68,13 @@ LOG_LEVEL=info
     };
     
     fs.writeFileSync(credentialsExample, JSON.stringify(exampleCredentials, null, 2));
-    console.log('✅ Пример файла учетных данных создан: credentials/google-credentials.example.json\n');
+    console.log('✅ Пример файла учетных данных создан: config/credentials/google-credentials.example.json\n');
   }
 
   console.log('🎉 Настройка завершена!');
   console.log('\n📋 Следующие шаги:');
-  console.log('1. Скопируйте ваш файл учетных данных Google в credentials/google-credentials.json');
-  console.log('2. Проверьте настройки в файле .env');
+  console.log('1. Скопируйте ваш файл учетных данных Google в config/credentials/google-credentials.json');
+  console.log('2. Проверьте настройки в файле config/.env');
   console.log('3. Запустите бота командой: npm start');
   console.log('\n📚 Подробные инструкции смотрите в README.md');
 

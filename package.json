@@ -9,10 +9,10 @@
     "dev": "node --watch src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -rf logs/*.log",
-    "setup": "node scripts/setup.js",
-    "google-setup": "node scripts/google-setup.js",
-    "validate": "node scripts/validate.js",
-    "security": "node scripts/security-check.js",
+    "setup": "node tools/scripts/setup.js",
+    "google-setup": "node tools/scripts/google-setup.js",
+    "validate": "node tools/scripts/validate.js",
+    "security": "node tools/scripts/security-check.js",
     "precommit": "npm run security && npm run validate"
   },
   "keywords": [

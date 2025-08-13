@@ -6,7 +6,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Загружаем переменные окружения из .env файла если он существует
-const envPath = path.join(process.cwd(), '.env');
+const envPath = path.join(process.cwd(), 'config', '.env');
 if (fs.existsSync(envPath)) {
   const envContent = fs.readFileSync(envPath, 'utf8');
   envContent.split('\n').forEach(line => {
