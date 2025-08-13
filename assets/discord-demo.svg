@@ -1,0 +1,60 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="discordBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#36393f"/>
+      <stop offset="100%" style="stop-color:#2f3136"/>
+    </linearGradient>
+    
+    <filter id="messageShadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  
+  <!-- Discord UI Background -->
+  <rect width="400" height="300" fill="url(#discordBg)" rx="8"/>
+  
+  <!-- Header -->
+  <rect width="400" height="40" fill="#40444b"/>
+  <text x="20" y="25" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white"># general</text>
+  
+  <!-- Message container -->
+  <g transform="translate(20, 60)">
+    <!-- Bot avatar -->
+    <circle cx="20" cy="20" r="15" fill="#fbbf24"/>
+    <text x="20" y="27" text-anchor="middle" font-size="12" fill="white">🤖</text>
+    
+    <!-- Bot name and timestamp -->
+    <text x="50" y="18" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff">GSDiscord Bot</text>
+    <rect x="140" y="8" width="25" height="12" rx="6" fill="#5865f2"/>
+    <text x="152" y="17" text-anchor="middle" font-size="8" fill="white" font-weight="bold">BOT</text>
+    <text x="180" y="18" font-family="Arial, sans-serif" font-size="10" fill="#72767d">Today at 12:34 PM</text>
+  </g>
+  
+  <!-- Embed message -->
+  <g transform="translate(70, 90)">
+    <rect width="300" height="150" rx="8" fill="#2f3136" stroke="#ffa500" stroke-width="3" filter="url(#messageShadow)"/>
+    
+    <!-- Embed header -->
+    <rect x="8" y="8" width="284" height="25" rx="4" fill="rgba(255, 165, 0, 0.1)"/>
+    <text x="16" y="23" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffa500">📋 Новая запись в Google Sheets</text>
+    
+    <!-- Embed content -->
+    <text x="16" y="45" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#ffffff">Имя:</text>
+    <text x="16" y="60" font-family="Arial, sans-serif" font-size="11" fill="#dcddde">Иван Петров</text>
+    
+    <text x="16" y="80" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#ffffff">Email:</text>
+    <text x="16" y="95" font-family="Arial, sans-serif" font-size="11" fill="#dcddde">ivan@example.com</text>
+    
+    <text x="16" y="115" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#ffffff">Сообщение:</text>
+    <text x="16" y="130" font-family="Arial, sans-serif" font-size="11" fill="#dcddde">Отличный сервис!</text>
+    
+    <!-- Footer -->
+    <text x="290" y="145" text-anchor="end" font-family="Arial, sans-serif" font-size="9" fill="#72767d">Обновлено: 13.08.2025, 12:34</text>
+  </g>
+  
+  <!-- @everyone mention -->
+  <g transform="translate(20, 260)">
+    <rect width="80" height="20" rx="10" fill="rgba(88, 101, 242, 0.3)"/>
+    <text x="40" y="14" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#5865f2" font-weight="bold">@everyone</text>
+  </g>
+</svg>

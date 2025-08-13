@@ -1,0 +1,77 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="backgroundGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="discordGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7289da;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5865f2;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="sheetsGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#34a853;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f9d58;stop-opacity:1" />
+    </linearGradient>
+    
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="400" fill="url(#backgroundGradient)"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="100" cy="100" r="60" fill="rgba(255,255,255,0.1)" opacity="0.3"/>
+  <circle cx="700" cy="300" r="80" fill="rgba(255,255,255,0.1)" opacity="0.2"/>
+  <circle cx="600" cy="80" r="40" fill="rgba(255,255,255,0.1)" opacity="0.4"/>
+  
+  <!-- Discord icon area -->
+  <rect x="50" y="150" width="80" height="80" rx="15" fill="url(#discordGradient)" filter="url(#glow)"/>
+  <text x="90" y="205" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="40" font-weight="bold">💬</text>
+  
+  <!-- Arrow -->
+  <polygon points="150,185 180,175 180,185 200,185 200,195 180,195 180,205" fill="white" opacity="0.8"/>
+  
+  <!-- Center Bot Icon -->
+  <circle cx="400" cy="200" r="50" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="3"/>
+  <text x="400" y="220" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="50">🤖</text>
+  
+  <!-- Arrow -->
+  <polygon points="470,185 500,175 500,185 520,185 520,195 500,195 500,205" fill="white" opacity="0.8"/>
+  
+  <!-- Google Sheets icon area -->
+  <rect x="570" y="150" width="80" height="80" rx="15" fill="url(#sheetsGradient)" filter="url(#glow)"/>
+  <text x="610" y="205" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="40" font-weight="bold">📊</text>
+  
+  <!-- Main Title -->
+  <text x="400" y="80" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="48" font-weight="bold" filter="url(#glow)">
+    GSDiscord Bot
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="400" y="110" text-anchor="middle" fill="rgba(255,255,255,0.9)" font-family="Arial, sans-serif" font-size="18" font-weight="normal">
+    🔗 Google Sheets ↔ Discord Integration
+  </text>
+  
+  <!-- Features -->
+  <text x="400" y="280" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="normal">
+    ✨ Real-time monitoring • 🔐 Secure • 📝 Beautiful notifications
+  </text>
+  
+  <!-- Bottom tagline -->
+  <text x="400" y="320" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-family="Arial, sans-serif" font-size="14">
+    Professional • Secure • Easy to use
+  </text>
+  
+  <!-- GitHub link -->
+  <text x="400" y="350" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-family="Arial, sans-serif" font-size="12">
+    github.com/IZenApp/GSDiscord
+  </text>
+</svg>

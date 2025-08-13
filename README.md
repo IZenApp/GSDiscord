@@ -2,6 +2,8 @@
 
 <div align="center">
 
+![GSDiscord Banner](assets/header.svg)
+
 [![Node.js](https://img.shields.io/badge/Node.js-14.x+-green.svg?style=for-the-badge&logo=node.js)](https://nodejs.org/)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge)](LICENSE)
 [![Discord](https://img.shields.io/badge/Discord-Bot-7289da.svg?style=for-the-badge&logo=discord)](https://discord.com/)
@@ -131,11 +133,22 @@ GSDiscord/
 ├── 📁 credentials/           # Учетные данные (в .gitignore)
 ├── 📁 logs/                  # Файлы логов (в .gitignore)
 ├── 📁 docs/                  # Документация
+├── 📁 assets/                # Изображения и ресурсы
 ├── .env                      # Переменные окружения (в .gitignore)
 ├── .gitignore               # Игнорируемые файлы
 ├── package.json             # Зависимости и скрипты
 └── README.md               # Этот файл
 ```
+
+### 💬 Результат в Discord
+
+<div align="center">
+
+![Discord Demo](assets/discord-demo.svg)
+
+*Пример уведомления в Discord канале*
+
+</div>
 
 ## � Безопасность
 
@@ -173,6 +186,12 @@ npm test           # Запуск тестов (в разработке)
 ```
 
 ## 📊 Как это работает
+
+<div align="center">
+
+![Architecture](assets/architecture.svg)
+
+</div>
 
 1. **Мониторинг**: Бот периодически (каждые 10 секунд) проверяет Google Sheets на наличие изменений
 2. **Обнаружение**: При обнаружении новых данных бот получает последнюю добавленную строку

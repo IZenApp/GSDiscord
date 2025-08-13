@@ -1,76 +1,57 @@
 # ============================================
-# БЕЗОПАСНОСТЬ И КОНФИДЕНЦИАЛЬНЫЕ ДАННЫЕ
+# 🔐 КОНФИДЕНЦИАЛЬНЫЕ ДАННЫЕ (КРИТИЧНО!)
 # ============================================
 
-# Environment variables (КРИТИЧНО!)
+# Environment variables
 .env
 .env.*
 !.env.example
-environment.js
-config.local.js
+!.env.template
 
-# Credentials and API keys (КРИТИЧНО!)
+# Google Service Account и учетные данные
 credentials/
 keys/
 secrets/
 certs/
 certificates/
-
-# Google Service Account files
 *service-account*.json
 *credentials*.json
-*key*.json
 *auth*.json
+*api-key*.json
+discordbot.json
+config.json
+webhook.json
+
+# Все JSON файлы кроме системных
+*.json
 !package*.json
 !tsconfig*.json
+!.vscode/*.json
 
-# Discord and API tokens
-discord.json
-discordbot.json
-webhook.json
-token.txt
-api-keys.txt
-
-# Database credentials
-database.json
-db-config.json
-connection-string.txt
-
-# SSH keys and certificates
-*.pem
+# API ключи и токены
 *.key
-*.crt
+*.pem
 *.p12
 *.pfx
+token.txt
+api-keys.txt
+discord-token.txt
+
+# База данных
+*.db
+*.sqlite
+*.sqlite3
+database.json
+db-config.json
+
+# SSH ключи
 id_rsa*
 id_dsa*
 id_ecdsa*
 id_ed25519*
 
 # ============================================
-# РАЗРАБОТКА И ЗАВИСИМОСТИ
-# ============================================
-
-# Dependencies
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-
-# Package manager lock files (опционально)
-# package-lock.json
-# yarn.lock
-
-# Production builds
-dist/
-build/
-out/
-.next/
-.nuxt/
-
-# ============================================
-# ЛОГИ И ВРЕМЕННЫЕ ФАЙЛЫ
+# 📝 ЛОГИ И ВРЕМЕННЫЕ ФАЙЛЫ
 # ============================================
 
 # Application logs
@@ -79,6 +60,7 @@ logs/
 log-*.txt
 debug-*.txt
 error-*.txt
+audit-*.txt
 
 # Runtime data
 pids/
@@ -87,24 +69,62 @@ pids/
 *.pid.lock
 .lock-wscript
 
-# Coverage directory
+# Temporary files
+tmp/
+temp/
+.tmp/
+.temp/
+
+# ============================================
+# 📦 ЗАВИСИМОСТИ И СБОРКА
+# ============================================
+
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Production builds
+dist/
+build/
+out/
+.next/
+.nuxt/
+.output/
+
+# Package manager files (опционально)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# ============================================
+# 🧪 ТЕСТИРОВАНИЕ И COVERAGE
+# ============================================
+
+# Test coverage
 coverage/
 .nyc_output/
 .coverage/
+*.lcov
 
 # Test files
 test-results/
 test-output/
 *.test.local.js
+.jest/
 
 # ============================================
-# IDE И РЕДАКТОРЫ
+# 🛠️ IDE И РЕДАКТОРЫ
 # ============================================
 
 # Visual Studio Code
 .vscode/
 !.vscode/extensions.json
-!.vscode/settings.example.json
+!.vscode/settings.json
+.vscode/settings.local.json
 
 # JetBrains IDEs
 .idea/
@@ -123,14 +143,15 @@ test-output/
 .netrwhist
 
 # Emacs
-*~
 \#*\#
 /.emacs.desktop
 /.emacs.desktop.lock
 *.elc
+auto-save-list
+tramp
 
 # ============================================
-# ОПЕРАЦИОННЫЕ СИСТЕМЫ
+# 💻 ОПЕРАЦИОННЫЕ СИСТЕМЫ
 # ============================================
 
 # macOS
@@ -142,6 +163,11 @@ test-output/
 .AppleDouble
 .LSOverride
 Icon?
+.DocumentRevisions-V100
+.fseventsd
+.TemporaryItems
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
 
 # Windows
 Thumbs.db
@@ -156,75 +182,75 @@ $RECYCLE.BIN/
 # Linux
 *~
 .nfs*
+.Trash-*
 
 # ============================================
-# ВРЕМЕННЫЕ И КЭШ ФАЙЛЫ
+# 🗂️ КЭШИ И МЕТАДАННЫЕ
 # ============================================
 
-# Temporary directories
-tmp/
-temp/
-.tmp/
-.temp/
+# Package manager caches
+.npm/
+.yarn/
+.pnp.*
+.pnpm/
 
-# Cache directories
+# Build tool caches
 .cache/
 .parcel-cache/
+.webpack/
+.rollup.cache/
+
+# Linter caches
 .eslintcache
 .stylelintcache
 
-# Backup files
-*.bak
-*.backup
-*.orig
-*.save
-
 # ============================================
-# DOCKER И РАЗВЕРТЫВАНИЕ
+# 🐳 РАЗВЕРТЫВАНИЕ И DEVOPS
 # ============================================
 
-# Docker (если содержит чувствительные данные)
+# Docker
 Dockerfile.prod
-docker-compose.prod.yml
+Dockerfile.local
 docker-compose.override.yml
+docker-compose.prod.yml
 .dockerignore
 
-# Kubernetes secrets
+# Kubernetes
 *-secret.yaml
 *-secret.yml
+kustomization.yaml
 
 # Terraform
 *.tfstate
 *.tfstate.*
 *.tfvars
 .terraform/
+.terraform.lock.hcl
+
+# Ansible
+*.retry
+vault_pass.txt
 
 # ============================================
-# ПЕРСОНАЛЬНЫЕ И ТЕСТОВЫЕ ФАЙЛЫ
+# 📋 ЛИЧНЫЕ И РАБОЧИЕ ФАЙЛЫ
 # ============================================
 
-# Personal notes and TODO files
+# Personal files
 TODO.md
 NOTES.md
 notes.txt
 personal/
 private/
 drafts/
+scratch/
 
-# Test data with potentially sensitive info
-test-data/
-mock-data/
-sample-data/
-fixtures/
-
-# User uploads (если есть)
-uploads/
-user-files/
-attachments/
-
-# ============================================
-# АРХИВЫ И РЕЗЕРВНЫЕ КОПИИ
-# ============================================
+# Backup files
+*.bak
+*.backup
+*.orig
+*.save
+*_backup.*
+*_old.*
 
 # Archives
 *.zip
@@ -232,61 +258,88 @@ attachments/
 *.rar
 *.7z
 
-# Database dumps
-*.sql
-*.dump
-*.sqlite
-*.db
-
 # ============================================
-# ДОПОЛНИТЕЛЬНЫЕ ФАЙЛЫ ПРОЕКТА
+# 🔧 ДОПОЛНИТЕЛЬНЫЕ ИСКЛЮЧЕНИЯ
 # ============================================
 
-# Old files and backups
-*_OLD.*
-*_BACKUP.*
-*_old.*
-*_backup.*
-
-# Local configuration overrides
-local.js
-local.json
-config.local.*
-
-# Performance monitoring
-.clinic/
-clinic.flamegraph.html
-
-# Dependency directories
-jspm_packages/
-bower_components/
+# Node.js specific
+.node_repl_history
+npm-shrinkwrap.json
+.npm
+.node_gyp
 
 # Optional REPL history
-.node_repl_history
-
-# Output of 'npm pack'
-*.tgz
-
-# Yarn Integrity file
 .yarn-integrity
 
-# DotEnv configuration (additional)
+# DotEnv additional
 .env.production
 .env.staging
 .env.development
 .env.test
+.env.local
 
-# Serverless directories
+# Serverless
 .serverless/
+serverless.yml
 
 # FuseBox cache
 .fusebox/
 
-# DynamoDB Local files
+# DynamoDB Local
 .dynamodb/
 
 # TernJS port file
 .tern-port
 
-# Stores VSCode versions used for testing VSCode extensions
+# Stores VSCode versions
 .vscode-test/
+
+# Yarn v2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# ============================================
+# 🎨 МЕДИА И РЕСУРСЫ (опционально)
+# ============================================
+
+# Исходные файлы дизайна (раскомментируйте если нужно)
+# *.psd
+# *.ai
+# *.sketch
+# *.fig
+
+# ============================================
+# 📊 МОНИТОРИНГ И ПРОФИЛИРОВАНИЕ
+# ============================================
+
+# Performance monitoring
+.clinic/
+clinic.flamegraph.html
+0x.flamegraph.html
+
+# Memory dumps
+*.heapsnapshot
+
+# Profiling data
+*.cpuprofile
+
+# ============================================
+# 🔐 ДОПОЛНИТЕЛЬНАЯ БЕЗОПАСНОСТЬ
+# ============================================
+
+# GPG keys
+*.gpg
+*.asc
+
+# SSL certificates
+*.crt
+*.ca-bundle
+
+# Private config overrides
+local.js
+local.json
+config.local.*
+settings.local.*

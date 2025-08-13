@@ -70,8 +70,8 @@ const config = {
 
 // ❌ Плохо
 const config = {
-  sheetId: "1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms",
-  webhookUrl: "https://discord.com/api/webhooks/123/abc"
+  sheetId: "YOUR_REAL_SHEET_ID_HERE",
+  webhookUrl: "https://discord.com/api/webhooks/YOUR_WEBHOOK_HERE"
 };
 ```
 
