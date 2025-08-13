@@ -1,0 +1,39 @@
+name: 🔐 Security Check
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  security:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 📥 Checkout code
+      uses: actions/checkout@v4
+      
+    - name: 📦 Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: 📚 Install dependencies
+      run: npm ci
+      
+    - name: 🔍 Run security scan
+      run: npm run security
+      
+    - name: ✅ Validate configuration
+      run: npm run validate || true  # Не падаем если нет .env (это нормально для CI)
+      
+    - name: 🧪 Check for secrets in commit
+      run: |
+        if git log --format=%B -n 1 | grep -iE "(password|secret|token|key|api)" && ! git log --format=%B -n 1 | grep -iE "(YOUR_|EXAMPLE_|template|docs)"; then
+          echo "❌ Potential secret found in commit message!"
+          exit 1
+        else
+          echo "✅ No secrets detected in commit message"
+        fi

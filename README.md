@@ -1,8 +1,17 @@
 # 🤖 GSDiscord Bot
 
-[![Node.js](https://img.shields.io/badge/Node.js-14.x+-green.svg)](https://nodejs.org/)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Discord](https://img.shields.io/badge/Discord-Bot-7289da.svg)](https://discord.com/)
+<div align="center">
+
+[![Node.js](https://img.shields.io/badge/Node.js-14.x+-green.svg?style=for-the-badge&logo=node.js)](https://nodejs.org/)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge)](LICENSE)
+[![Discord](https://img.shields.io/badge/Discord-Bot-7289da.svg?style=for-the-badge&logo=discord)](https://discord.com/)
+[![Google Sheets](https://img.shields.io/badge/Google%20Sheets-API-34A853.svg?style=for-the-badge&logo=google-sheets)](https://developers.google.com/sheets/api)
+
+[![GitHub stars](https://img.shields.io/github/stars/IZenApp/GSDiscord?style=for-the-badge)](https://github.com/IZenApp/GSDiscord/stargazers)
+[![GitHub issues](https://img.shields.io/github/issues/IZenApp/GSDiscord?style=for-the-badge)](https://github.com/IZenApp/GSDiscord/issues)
+[![GitHub forks](https://img.shields.io/github/forks/IZenApp/GSDiscord?style=for-the-badge)](https://github.com/IZenApp/GSDiscord/network)
+
+</div>
 
 **GSDiscord** - это современный бот для интеграции Google Sheets с Discord. Автоматически отслеживает изменения в ваших Google таблицах и отправляет красивые уведомления в Discord каналы.
 
@@ -226,11 +235,27 @@ tail -f logs/$(date +%Y-%m-%d).log
 
 ## 🤝 Вклад в проект
 
-1. Форкните репозиторий
+Любые вклады **очень ценятся**! Прочитайте [CONTRIBUTING.md](CONTRIBUTING.md) для подробной информации о том, как участвовать в развитии проекта.
+
+1. Fork проект
 2. Создайте ветку для новой функции (`git checkout -b feature/amazing-feature`)
 3. Зафиксируйте изменения (`git commit -m 'Add amazing feature'`)
 4. Отправьте в ветку (`git push origin feature/amazing-feature`)
 5. Откройте Pull Request
+
+## ⭐ Поддержка проекта
+
+Если проект вам помог, поставьте ⭐ звездочку на GitHub!
+
+<div align="center">
+
+### 📊 Статистика проекта
+
+![GitHub repo size](https://img.shields.io/github/repo-size/IZenApp/GSDiscord?style=flat-square)
+![Lines of code](https://img.shields.io/tokei/lines/github/IZenApp/GSDiscord?style=flat-square)
+![GitHub last commit](https://img.shields.io/github/last-commit/IZenApp/GSDiscord?style=flat-square)
+
+</div>
 
 ## 📄 Лицензия
 
@@ -240,12 +265,21 @@ tail -f logs/$(date +%Y-%m-%d).log
 
 - **IZenApp** - *Основной разработчик* - [GitHub](https://github.com/IZenApp)
 
+Полный список [участников](https://github.com/IZenApp/GSDiscord/contributors) проекта.
+
 ## 🙏 Благодарности
 
-- Google за предоставление API для работы с Sheets
-- Discord за удобный API для интеграций
-- Сообществу Node.js за отличные библиотеки
+- [Google](https://developers.google.com/sheets/api) за предоставление API для работы с Sheets
+- [Discord](https://discord.com/developers/docs/intro) за удобный API для интеграций
+- [Node.js](https://nodejs.org/) сообществу за отличные библиотеки
+- Всем [участникам](https://github.com/IZenApp/GSDiscord/contributors) проекта
 
 ---
 
-**⭐ Если проект был полезен, поставьте звездочку!**
+<div align="center">
+
+**⭐ Если проект был полезен, поставьте звездочку! ⭐**
+
+[🚀 Начать использовать](docs/QUICKSTART.md) • [📖 Документация](docs/INSTALLATION.md) • [🐛 Сообщить об ошибке](https://github.com/IZenApp/GSDiscord/issues) • [💡 Предложить функцию](https://github.com/IZenApp/GSDiscord/issues)
+
+</div>
