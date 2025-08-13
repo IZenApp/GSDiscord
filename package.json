@@ -1,17 +1,46 @@
 {
   "name": "gsdiscord",
   "version": "1.0.0",
-  "main": "GSDiscord.js",
+  "description": "Bot для интеграции Google Sheets с Discord. Автоматически отслеживает изменения в Google Sheets и отправляет уведомления в Discord канал.",
+  "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf logs/*.log",
+    "setup": "node scripts/setup.js",
+    "google-setup": "node scripts/google-setup.js",
+    "validate": "node scripts/validate.js",
+    "security": "node scripts/security-check.js",
+    "precommit": "npm run security && npm run validate"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "discord",
+    "google-sheets",
+    "bot",
+    "webhook",
+    "automation",
+    "integration",
+    "notifications"
+  ],
+  "author": "IZenApp",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IZenApp/GSDiscord.git"
+  },
+  "bugs": {
+    "url": "https://github.com/IZenApp/GSDiscord/issues"
+  },
+  "homepage": "https://github.com/IZenApp/GSDiscord#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
   "dependencies": {
     "google-auth-library": "^9.14.2",
     "googleapis": "^144.0.0",
     "node-fetch": "^3.3.2"
-  }
+  },
+  "devDependencies": {}
 }
