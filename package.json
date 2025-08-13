@@ -1,7 +1,7 @@
 {
   "name": "gsdiscord",
-  "version": "1.0.0",
-  "description": "Bot для интеграции Google Sheets с Discord. Автоматически отслеживает изменения в Google Sheets и отправляет уведомления в Discord канал.",
+  "version": "1.2.0",
+  "description": "🔗 Seamless Google Sheets to Discord integration bot with real-time monitoring, secure authentication, and instant notifications. Perfect for automated workflows and team collaboration.",
   "main": "src/index.js",
   "type": "module",
   "scripts": {
@@ -16,13 +16,26 @@
     "precommit": "npm run security && npm run validate"
   },
   "keywords": [
-    "discord",
+    "discord-bot",
     "google-sheets",
-    "bot",
-    "webhook",
-    "automation",
     "integration",
-    "notifications"
+    "automation",
+    "webhook",
+    "real-time",
+    "monitoring",
+    "nodejs",
+    "javascript",
+    "api",
+    "notifications",
+    "spreadsheet",
+    "bot",
+    "discord-webhook",
+    "google-api",
+    "workflow",
+    "collaboration",
+    "secure",
+    "open-source",
+    "productivity"
   ],
   "author": "IZenApp",
   "license": "MIT",
@@ -33,7 +46,7 @@
   "bugs": {
     "url": "https://github.com/IZenApp/GSDiscord/issues"
   },
-  "homepage": "https://github.com/IZenApp/GSDiscord#readme",
+  "homepage": "https://izenapp.github.io/GSDiscord",
   "engines": {
     "node": ">=14.0.0"
   },
